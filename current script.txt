@@ -1,0 +1,13 @@
+SM <-> CMI;
+CMI + SM <-> SS;
+SM : 100;
+CMI : 0;
+SS : 0;
+k(+1) : 0.00009;
+k(+2) : 0.00001;
+k(-1): 0.00001;
+k(-2): 0.0001;
+timeStep : 30;
+*script
+fit (SM,"A"); fit (CMI, "I"); 
+go varying k(+1), k(-1), k(+2), k(-2);
